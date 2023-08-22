@@ -13,7 +13,7 @@ Test result table (amount of iterations, more is better)
 
 
 >duration : 10s
->server response: ~ 1 ms 
+>server response: ~ 0.5 ms 
 
 |threads   |JMETER          |COMMON          | FAST     |
 | -------- | -------------- | -------------- | -------- |
@@ -22,7 +22,7 @@ Test result table (amount of iterations, more is better)
 | 3        | 30946          | 9319           | 32447    |
 | 4        | 32288          | 9485           | 36370    |
 
-As you can see, with server response less than 2 ms the difference is quite significant to abandon HttpClient in favor of alternative solutions.
+As you can see, with server response less than 1 ms the difference is quite significant to abandon HttpClient in favor of alternative solutions.
 
 
 >duration : 10s
