@@ -13,7 +13,7 @@ Test result table (amount of iterations, more is better)
 
 
 >duration : 10s
-server response: ~ 1 ms 
+>server response: ~ 1 ms 
 
 |threads   |JMETER          |COMMON          | FAST     |
 | -------- | -------------- | -------------- | -------- |
@@ -26,7 +26,7 @@ As you can see, with server response less than 2 ms the difference is quite sign
 
 
 >duration : 10s
-server response: ~ 15 ms
+>server response: ~ 15 ms
 
 |threads   |JMETER          |COMMON          | FAST    |
 | -------- | -------------- | -------------- | ------- |
