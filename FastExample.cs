@@ -23,7 +23,7 @@ internal class FastExample
         var scenario = Scenario.Create("fast scenario", async context =>
         {
             //---
-            var request = FastHttp.CreateRequest("POST", "http://127.0.0.1:7002/api/trades");
+            var request = FastHttp.CreateRequest("POST", "http://127.0.0.1:9090");
 
             //--- add session headers
             request.WithHeader("Time", String.Format("{0:ddd,' 'dd' 'MMM' 'yyyy' 'HH':'mm':'ss' 'K}", DateTime.Now));

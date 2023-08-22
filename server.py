@@ -7,11 +7,11 @@ sleepMsc = lambda x: time.sleep(x/1000.0)
 
 class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
-        #sleepMsc(1)
+        #sleepMsc(10)
         self.send_response(200)
         self.end_headers()
     def do_POST(self):
-        #sleepMsc(1)
+        #sleepMsc(10)
         self.send_response(200)
         self.end_headers()
 

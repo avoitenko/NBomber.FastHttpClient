@@ -23,7 +23,7 @@ internal class CommonExample
         var scenario = Scenario.Create("common scenario", async context =>
         {
             //---
-            var request = Http.CreateRequest("POST", "http://127.0.0.1:7002/api/trades");
+            var request = Http.CreateRequest("POST", "http://127.0.0.1:9090");
 
             //---
             request.WithHeader("Authorization", "qwe123!@#");

@@ -8,19 +8,35 @@ I started the Http Server and measured the performance. The code of HttpServer l
 
 Also I compared results with JMeter which is taken as a standard.
 
-duration : 10s
-server response: < 1 ms
 
 Test result table (amount of iterations, more is better)
 
-|threads   |JMETER          |COMMON           | FAST     |
-| -------- | -------------- | --------------- | -------- |
-| 1        | 15000          | 15000           | 15000    |
-| 2        | 15000          | 15000           | 15000    |
-| 3        | 15000          | 15000           | 15000    |
-| 4        | 15000          | 15000           | 15000    |
 
-As you can see, the difference is quite significant to abandon HttpClient in favor of alternative solutions.
+duration : 10s
+server response: ~ 2 ms
+
+|threads   |JMETER          |COMMON          | FAST     |
+| -------- | -------------- | -------------- | -------- |
+| 1        | 17591          | 7330           | 15310    |
+| 2        | 28878          | 9033           | 27484    |
+| 3        | 30946          | 9319           | 32447    |
+| 4        | 32288          | 9485           | 36370    |
+
+As you can see, with server response less than 2 ms the difference is quite significant to abandon HttpClient in favor of alternative solutions.
+
+
+duration : 10s
+server response: ~ 15 ms
+
+|threads   |JMETER          |COMMON          | FAST    |
+| -------- | -------------- | -------------- | ------- |
+| 1        | 650            | 586            | 603     |
+| 2        | 1262           | 1180           | 1224    |
+| 3        | 1885           | 1886           | 1874    |
+| 4        | 2492           | 2451           | 2456    |
+
+With a response more than 15 ms, the results are approximately the same for everyone.
+
 
 TODO:
 - add support of HTTPS for FastHttp.Send().
