@@ -103,14 +103,12 @@ public class FastHttp
                 using (StreamWriter writer = new StreamWriter(stream, Encoding.ASCII, 8096, true))
                 using (StreamReader reader = new StreamReader(stream, Encoding.ASCII))
                 {
-                    // Construct and send the HTTP request
-                    //StringBuilder header = new StringBuilder();
-                    string header = string.Empty;
-
+                    
                     string strMethod = request.Method.ToString().ToUpper();
                     string strVersion = request.Version.ToString();
-                    header += $"{strMethod} {request.RequestUri.PathAndQuery} HTTP/{strVersion}\r\n";
-
+                    
+                    //--- construct and send the HTTP request
+                    string header = $"{strMethod} {request.RequestUri.PathAndQuery} HTTP/{strVersion}\r\n";
 
                     //---
                     var requestStream = request.Content.ReadAsStream();
