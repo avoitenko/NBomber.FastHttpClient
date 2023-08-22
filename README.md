@@ -9,7 +9,7 @@ I started the Http Server and measured the performance. The code of HttpServer l
 Also I compared results with JMeter which is taken as a standard.
 
 duration : 10s
-server response: < 1ms
+server response: < 1 ms
 
 Test result table (amount of iterations, more is better)
 
