@@ -2,9 +2,9 @@
 
 The reason for creating this repository is that using HttpClient for load testing comes with a lot of overhead.
 
-Replacing HttpClient to TCPClient gives a performance boost by several times if your responses are very short, up to 1 ms.
+Replacing HttpClient to TCPClient gives a performance boost by several times if your server responses are very short, up to 1 ms.
 
-I started the Http Server and measured the performance. The code of HttpServer localted in server.py file.
+I started the python http Server and measured the performance. The code of HttpServer localted in **server.py** file. Run by **server.bat**
 
 Also I compared results with JMeter which is taken as a standard.
 
@@ -12,8 +12,8 @@ Also I compared results with JMeter which is taken as a standard.
 Test result table (amount of iterations, more is better)
 
 
-duration : 10s
-server response: ~ 2 ms
+>duration : 10s
+server response: ~ 1 ms 
 
 |threads   |JMETER          |COMMON          | FAST     |
 | -------- | -------------- | -------------- | -------- |
@@ -25,7 +25,7 @@ server response: ~ 2 ms
 As you can see, with server response less than 2 ms the difference is quite significant to abandon HttpClient in favor of alternative solutions.
 
 
-duration : 10s
+>duration : 10s
 server response: ~ 15 ms
 
 |threads   |JMETER          |COMMON          | FAST    |
